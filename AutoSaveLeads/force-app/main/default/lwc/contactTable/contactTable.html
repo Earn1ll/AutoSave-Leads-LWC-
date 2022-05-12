@@ -1,0 +1,18 @@
+<template>
+    <div class='slds-p-around_medium header_container'>
+        <lightning-tile label='Contacts' title='Contacts' type='media'>
+            <h1>Contacts table</h1>
+            <lightning-icon slot='media' icon-name='standard:contact' size='medium'>
+            </lightning-icon>
+            <div>{err}</div>
+        </lightning-tile>
+    </div>
+    <lightning-card>
+            <lightning-datatable 
+                key-field='Id' 
+                data={records} 
+                columns={columns} 
+                show-row-number-column='true'>
+            </lightning-datatable>
+    </lightning-card>
+</template>

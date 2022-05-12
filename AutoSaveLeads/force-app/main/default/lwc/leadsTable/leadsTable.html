@@ -1,0 +1,21 @@
+<template>
+    <div class='slds-p-around_medium header_container'>
+        <lightning-tile label='Leads' title='Leads' type='media'>
+            <h1>Leads Table</h1>
+            <lightning-icon slot='media' icon-name='standard:lead' size='medium'>
+            </lightning-icon>
+            <div>{error}</div>
+        </lightning-tile>
+    </div>
+    <lightning-card>
+        <div class='div_datatable'>
+            <lightning-datatable 
+                key-field='Id' 
+                data={records} 
+                columns={columns} 
+                show-row-number-column='true' 
+                oncellchange={handleChangeAction}>
+            </lightning-datatable>
+        </div> 
+    </lightning-card>
+</template>
